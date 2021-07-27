@@ -11,6 +11,10 @@ Tahmin kabiliyetin ne kadar güçlü?
 - JAVASCRİPT ile yazılmıştır.
 - Sade anlaşılır bir paneldir.
 
+![1](https://user-images.githubusercontent.com/87112713/127143318-1dd38239-77d2-44f5-8943-c195d221239d.png)
+![2](https://user-images.githubusercontent.com/87112713/127143330-bcaa646f-f61c-44b7-85d3-baedb19ddf33.png)
+
+
 ## Installation
 
 ```sh
