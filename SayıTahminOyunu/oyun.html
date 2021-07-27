@@ -1,0 +1,70 @@
+<html>
+    <head> 
+        <title>Sayı Tahmin Oyunu</title>
+            <link rel="stylesheet" href="css/bootstrap.min.css">
+            <script src="js/bootstrap.bundle.min.js" ></script>
+    </head>
+        <body background="bg.png">
+
+            <div class="container" style="margin-top: 50px">
+                <div class="row">
+                <div class="col">
+                <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">
+                        <b><h1><center>TEKRARDAN HOŞGELDİN</center></h1></b>
+                        <center><b>Yapman Gerekenler:</b>
+                            <br>1'den 100'e kadar sayı tutmak,
+                            <br>Tuttuğun sayıyı ekrana girmek,
+                            <br>Vee ÖĞREN butonuna basıp tahmininin tutup tutmadığını öğrenmek :)
+                        </center>
+                    </p> 
+                 
+                <div class="alert alert-dark" role="alert">
+                    <input placeholder="Lütfen Tahmin Ettiğin Sayıyı Gir. (0-100) Arasında olsun ama.. "type="number"  id="sayi"class="form-control">
+                    
+                    <input button style="margin-top: 20px" name="edit" value="ÖĞREN" type="button" id="tahmin" class="btn btn-primary btn-block "></button>
+                    <input class="btn btn-warning btn-block " type="button" value="Yeniden Denemek İster Misin ?" onclick="document.location.reload(true);">
+
+                <script>
+                    var tsayi,sayac;
+                    var tahmin=document.querySelector("#tahmin");
+                    var sayi=document.querySelector("#sayi");
+                    
+                        tsayi=Math.round(Math.random()*100);
+                        sayac=0;
+                        
+                    tahmin.onclick=function()
+                    {
+                        sayac++;
+                        if(tsayi!=sayi.value && sayac>=3)
+                        {
+                            window.alert("Maalesef Hakkın Bitti. İstersen Butona Basarak Tekrar Deneyebilirsin :) Tuttuğum Sayı : "+ tsayi);
+                            
+                        } 
+                        if(tsayi==sayi.value && sayac<=3 )
+                        {
+                            window.alert("TEBRİKLER Kazandın.");
+                        }
+                        if(sayi.value>tsayi && sayac<3)
+                        {
+                            window.alert("Daha Küçük Sayı Girmen Lazım");
+                        }
+                        if(tsayi>sayi.value && sayac<3)
+                        {
+                            window.alert("Daha Büyük Sayı Girmen Lazım");
+                        }
+                    }
+                </script>
+        </body>     
+</html>
+
+
+
+
+
+
+
+
+
+
